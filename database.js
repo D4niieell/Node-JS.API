@@ -1,0 +1,69 @@
+/*
+Este código configura uma conexão com banco de dados MySQL usando Node.js. 
+Veja o que cada parte faz:
+*/
+
+/* Importação: */
+
+/* jsimport mysql from "mysql2/promise"; */
+
+/* Importa a biblioteca mysql2 na versão com suporte a Promises (permite usar async/await nas queries). */
+
+/* Criação do Pool de Conexões: */
+
+/* jsconst pool = mysql.createPool({ ... }); */
+
+/*
+Em vez de criar uma única conexão, cria um pool — um conjunto de conexões reutilizáveis. 
+Isso é mais eficiente porque evita abrir e fechar uma nova conexão a cada operação no banco.
+*/
+
+/* Configurações: */
+
+/* Propriedade - Valor - O que faz */
+
+/* host - "localhost" - Endereço do servidor MySQL (mesma máquina) */
+
+/* port - 3306 - Porta padrão do MySQL */
+
+/* user - "root"- Usuário do banco */
+
+/* password - "" - Senha (vazia, comum em ambiente de desenvolvimento) */
+
+/* database - "bd_livrariaonline - "Banco de dados a ser usado */
+
+/* waitForConnections - true - Se todas as conexões estiverem ocupadas, aguarda uma ficar disponível em vez de retornar erro */
+
+/* connectionLimit - 10 - Máximo de 10 conexões simultâneas no pool */
+
+/* queueLimit - 0 - Sem limite de requisições na fila de espera (0 = ilimitado) */
+
+/* Exportação: */
+
+/* jsexport default pool; */
+
+/* Exporta o pool para ser importado e usado em outras partes da aplicação, como nos arquivos que fazem queries ao banco. */
+
+/*
+Resumindo: 
+é um arquivo de configuração de banco de dados que cria um pool de conexões MySQL reutilizáveis e o disponibiliza para o resto da aplicação. 
+Provavelmente é um arquivo chamado algo como db.js ou database.js. 
+*/
+
+import mysql from "mysql2/promise";
+
+const pool = mysql.createPool
+    (
+        {
+            host: "localhost", /* 127.0.0.1 */
+            port: 3306,
+            user: "root",
+            password: "",
+            database: "bd_livrariaonline",
+            waitForConnections: true,
+            connectionLimit: 10,
+            queueLimit: 0,
+        }
+    );
+
+export default pool; 
