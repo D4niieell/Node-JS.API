@@ -1,0 +1,38 @@
+É uma página HTML de cadastro de usuários com um formulário simples. 
+Veja o que cada parte faz:
+
+Estrutura geral
+O <!DOCTYPE html> e as tags <html>, <head> e <body> formam o esqueleto padrão de qualquer página web.
+
+Cabeçalho (<head>)
+
+charset="UTF-8" — garante suporte a caracteres especiais (acentos, ç etc.)
+viewport — faz a página se adaptar a telas de celular
+<link rel="stylesheet" href="estilo.css"> — carrega um arquivo CSS externo para estilização
+<title> — define o nome exibido na aba do navegador
+
+
+Formulário (<form>)
+Contém três campos de texto:
+Campo - ID - Função
+Nome - name - Recebe o nome do usuário
+E-mail - email - Recebe o e-mail
+Telefone - telefone - Recebe o telefone
+
+Botões
+
+Cadastrar (btnSave) - visível por padrão, envia o formulário
+Atualizar (btnAtualizar) - oculto inicialmente (classe hide), aparece ao editar um registro
+Cancelar (btnCancelar) - também oculto, cancela a edição
+
+A lógica de mostrar/ocultar esses botões é controlada pelo JavaScript.
+
+Outras partes
+
+<div id="message"> - área reservada para exibir mensagens de feedback (ex: "Cadastro realizado com sucesso!")
+<div id="resultado"> - onde provavelmente será renderizada a tabela com os cadastros salvos
+<script src="./app.js"> - carrega o JavaScript que dá vida ao formulário (salvar, atualizar, cancelar, listar dados)
+
+
+Em resumo, este HTML é a estrutura visual de um CRUD simples (Create, Read, Update, Delete), onde o app.js cuida de toda a lógica e o estilo.css cuida da aparência.
+

@@ -1,0 +1,27 @@
+Explicação do CSS
+
+ `.container > div`
+Seleciona todos os `<div>` **filhos diretos** do elemento com classe `container` e os transforma em **flex containers** centralizados — tanto horizontalmente (`justify-content`) quanto verticalmente (`align-items`).
+
+---
+
+ `.resultado`
+Define o layout da área de resultados:
+- `display: flex` + `flex-wrap: wrap` → os itens ficam em linha, mas **quebram para a próxima linha** se não couberem
+- `width: 70%` + `margin: 0 auto` → centraliza o bloco na página com 70% da largura
+- `gap: 1rem` → espaçamento uniforme entre os itens
+
+---
+
+ `.card` e `.form`
+Os dois têm o mesmo estilo visual:
+- `border` → borda sólida preta de 2px
+- `border-radius: 0.5rem` → cantos arredondados
+- `padding: 1rem` → espaçamento interno
+
+A diferença é só semântica — um é usado para cartões de resultado, o outro para formulários.
+
+---
+
+ `.hide`
+Classe utilitária simples: `display: none` **oculta completamente** o elemento da página. Muito usada com JavaScript para mostrar/esconder elementos dinamicamente, adicionando ou removendo essa classe. 

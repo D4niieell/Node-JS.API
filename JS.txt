@@ -1,0 +1,32 @@
+Variável - Método - O que faz 
+
+name - getElementById: Busca um elemento pelo atributo: id="name" 
+
+btSave - getElementById: Busca um elemento pelo atributo: id="btnSave" 
+
+telefone - querySelector: Busca um elemento usando seletor: CSS #telefone 
+
+email - querySelector: Busca um elemento usando seletor CSS: #email 
+
+Diferença entre os métodos: 
+getElementById aceita apenas IDs, enquanto querySelector aceita qualquer seletor CSS 
+(classes, tags, IDs, etc.), sendo mais flexível.
+
+btnSave.addEventListener("click", ...)
+Adiciona um "ouvinte" que aguarda o clique no botão de salvar.
+ 
+e.preventDefault()
+Cancela o comportamento padrão do evento. Se o botão estiver dentro de um <form>, 
+impede que a página seja recarregada ao clicar.
+ 
+const userData = { name: name.value }
+Cria um objeto chamado userData contendo o valor digitado no campo name. O .value pega o texto atual do input.
+
+console.log(userData)
+Exibe o objeto no console do navegador (DevTools), útil para depuração.
+
+Resumo do Fluxo
+Usuário digita o nome -> clica no botão -> JS captura o valor -> exibe no console 
+
+As variáveis telefone e email são capturadas mas não são utilizadas em nenhuma parte do código, 
+indicando que provavelmente seriam usadas futuramente.

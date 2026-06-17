@@ -1,0 +1,49 @@
+O "Prompt de Comando" (cmd.exe) é o terminal do Windows para executar comandos de texto. 
+Veja o essencial:
+
+ Como abrir
+
+- **Win + R** → digita `cmd` → Enter
+- Ou pesquisa "Prompt de Comando" no menu Iniciar
+- Para abrir como "administrador": clique com botão direito → "Executar como administrador"
+
+ Navegação de pastas
+
+| Comando | O que faz |
+|---|---|
+| `dir` | Lista arquivos e pastas |
+| `cd NomeDaPasta` | Entra em uma pasta |
+| `cd ..` | Volta uma pasta |
+| `cd \` | Vai para a raiz do disco |
+| `cd C:\Users` | Vai para um caminho específico |
+
+ Operações com arquivos
+
+| Comando | O que faz |
+|---|---|
+| `mkdir NomeDaPasta` | Cria uma pasta |
+| `copy arquivo.txt destino\` | Copia um arquivo |
+| `move arquivo.txt destino\` | Move um arquivo |
+| `del arquivo.txt` | Apaga um arquivo |
+| `rename velho.txt novo.txt` | Renomeia |
+| `type arquivo.txt` | Exibe o conteúdo de um arquivo |
+
+Comandos úteis do dia a dia
+
+| Comando | O que faz |
+|---|---|
+| `cls` | Limpa a tela |
+| `ipconfig` | Mostra seu IP e configurações de rede |
+| `ping google.com` | Testa a conexão com a internet |
+| `tasklist` | Lista programas em execução |
+| `taskkill /IM programa.exe /F` | Força o encerramento de um programa |
+| `shutdown /s /t 0` | Desliga o computador imediatamente |
+| `exit` | Fecha o prompt |
+
+ Dicas importantes
+
+- Use **Tab** para autocompletar nomes de arquivo/pasta
+- Use **↑ ↓** para navegar no histórico de comandos
+- Coloque caminhos com espaço entre aspas: `cd "Meus Documentos"`
+- `/?` após qualquer comando mostra a ajuda: ex. `dir /?`
+
